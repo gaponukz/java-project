@@ -1,6 +1,7 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push
 
 jobs:
   lint:
@@ -18,4 +19,4 @@ jobs:
 
     - name: Run linter
       run: |
-        ./gradlew check
+        ./mvnw verify
